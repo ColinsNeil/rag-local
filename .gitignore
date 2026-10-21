@@ -1,0 +1,17 @@
+# Environnement virtuel Python
+.venv/
+__pycache__/
+*.pyc
+
+# Base vectorielle générée, recréée par ingest.py
+chroma_db/
+
+# Résultats d'évaluation générés
+eval/results/
+
+# Corpus non publié
+docs/*.pdf
+
+# Éditeur et système
+.vscode/
+.DS_Store
