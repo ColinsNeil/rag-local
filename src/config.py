@@ -26,3 +26,16 @@ EMBED_MODEL = "bge-m3"
 # et la question (~150), plus la réponse (300 à 500) ~ 2200 tokens.
 # 4096 laisse de la marge. À relever si TOP_K ou CHUNK_SIZE augmentent.
 NUM_CTX = 4096
+
+# 0 : le modèle répond de façon stable, sans broder, et l'évaluation est reproductible
+TEMPERATURE = 0
+
+# Phrase de refus, aussi utilisée pour détecter qu'aucune réponse n'a été trouvée
+REFUSAL_PHRASE = "Je ne sais pas d'après les documents fournis."
+
+# Consigne neutre envoyée au modèle, sans aucun métier
+SYSTEM_PROMPT = (
+    "Réponds à la question uniquement à partir des extraits ci-dessous. "
+    f"Si la réponse ne s'y trouve pas, réponds « {REFUSAL_PHRASE} » "
+    "Indique pour chaque information le fichier et la page d'où elle vient."
+)
