@@ -86,7 +86,8 @@ Fichier `eval/questions.json`, une entrée par question avec les champs suivants
 - `question`
 - `reponse_attendue`
 - `source_attendue` (fichier, ou `null` pour une question hors corpus)
-- `page`
+- `remarque` (optionnel), pour préciser un cas particulier
+- `page` est le rang de la page dans le PDF, la première page valant 1
 - `type` (`factuelle` ou `hors_corpus`)
 
 Deux mesures, qui restent séparées.
