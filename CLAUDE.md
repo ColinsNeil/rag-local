@@ -14,6 +14,7 @@ L'assistant est généraliste. Aucun domaine n'est codé en dur. Le domaine vien
 - Un commit par étape, avec un message court en français.
 - Ne jamais écrire de secret, de clé ni de donnée personnelle dans le dépôt.
 - Toujours activer l'environnement `.venv` avant de lancer du code. Ne jamais utiliser le `python` global.
+- Chaque fonction a une docstring en français d'une à deux phrases, qui dit ce qu'elle fait. Pas de commentaire ligne par ligne, sauf pour expliquer un choix qui n'est pas évident.
 - Les identifiants du code (fonctions, variables, constantes) sont en anglais. Les commentaires et les messages affichés sont en français.
 
 ## Périmètre
