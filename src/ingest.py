@@ -13,7 +13,14 @@ BATCH_SIZE = 32  # morceaux envoyés à Ollama en une fois
 
 
 def read_documents(docs_dir):
-    """Renvoie une liste de (fichier, page, texte). La première page vaut 1."""
+    """Lit les fichiers PDF et TXT d'un dossier, page par page.
+
+    Entrée :
+        docs_dir (Path) : dossier contenant les documents à lire.
+    Sortie :
+        list[tuple[str, int, str]] : un triplet (nom du fichier, numéro de page,
+        texte) par page non vide. La première page vaut 1.
+    """
     pages = []
     for path in sorted(docs_dir.iterdir()):
         if path.suffix.lower() == ".pdf":
@@ -32,7 +39,15 @@ def read_documents(docs_dir):
 
 
 def split_text(text, size=config.CHUNK_SIZE, overlap=config.CHUNK_OVERLAP):
-    """Découpe un texte en morceaux de `size` caractères qui se recouvrent de `overlap`."""
+    """Découpe un texte en morceaux qui se recouvrent.
+
+    Entrées :
+        text (str) : texte à découper.
+        size (int) : taille maximale d'un morceau, en caractères.
+        overlap (int) : nombre de caractères communs à deux morceaux voisins.
+    Sortie :
+        list[str] : les morceaux, dans l'ordre du texte (liste vide si le texte est vide).
+    """
     step = size - overlap
     chunks = []
     for start in range(0, len(text), step):
@@ -43,7 +58,13 @@ def split_text(text, size=config.CHUNK_SIZE, overlap=config.CHUNK_OVERLAP):
 
 
 def embed_texts(texts):
-    """Calcule les embeddings par lots, avec le modèle d'embeddings."""
+    """Calcule les embeddings des textes avec Ollama, par lots.
+
+    Entrée :
+        texts (list[str]) : textes à transformer en vecteurs.
+    Sortie :
+        list[list[float]] : un vecteur par texte, dans le même ordre.
+    """
     vectors = []
     for i in range(0, len(texts), BATCH_SIZE):
         batch = texts[i:i + BATCH_SIZE]
@@ -53,7 +74,17 @@ def embed_texts(texts):
 
 
 def store_chunks(ids, texts, metadatas, vectors):
-    """Recrée la collection puis y range les morceaux (relancer ne crée pas de doublons)."""
+    """Recrée la collection ChromaDB puis y range les morceaux.
+
+    Relancer la fonction ne crée pas de doublons.
+    Entrées :
+        ids (list[str]) : identifiant unique de chaque morceau.
+        texts (list[str]) : texte de chaque morceau.
+        metadatas (list[dict]) : métadonnées de chaque morceau (clés "fichier" et "page").
+        vectors (list[list[float]]) : embedding de chaque morceau.
+    Sortie :
+        aucune (None). Les données sont écrites dans la base sur disque.
+    """
     client = chromadb.PersistentClient(path=str(config.CHROMA_DIR))
     try:
         client.delete_collection(config.COLLECTION_NAME)
@@ -66,6 +97,12 @@ def store_chunks(ids, texts, metadatas, vectors):
 
 
 def main():
+    """Indexe les documents du dossier docs/ : lecture, découpage, embeddings, stockage.
+
+    Entrée : aucune (les réglages viennent de config.py).
+    Sortie : aucune (None). Affiche l'avancement et le temps total, et arrête
+    le programme avec un message si le dossier est vide ou si Ollama échoue.
+    """
     start_time = time.time()
 
     if not config.DOCS_DIR.exists():
