@@ -1,0 +1,148 @@
+[
+  {
+    "id": 1,
+    "question": "De quels éléments la rubrique « autres fonds propres » du bilan est-elle constituée selon le règlement ANC 2024-07 ?",
+    "reponse_attendue": "Des fonds non remboursables (article 315-1), des avances conditionnées (article 316-1) et des droits du concédant (article 1212-22).",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 3,
+    "type": "factuelle"
+  },
+  {
+    "id": 2,
+    "question": "Dans quel compte la part du principal ayant les caractéristiques des fonds non remboursables est-elle comptabilisée ?",
+    "reponse_attendue": "Dans le compte 1671 – Fonds non remboursables montant principal.",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 3,
+    "type": "factuelle"
+  },
+  {
+    "id": 3,
+    "question": "Quel délai minimal l'article L228-36 du code de commerce fixe-t-il avant que la société puisse rembourser des titres participatifs à son initiative ?",
+    "reponse_attendue": "Un délai qui ne peut être inférieur à sept ans (hors liquidation de la société).",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 4,
+    "type": "factuelle"
+  },
+  {
+    "id": 4,
+    "question": "Dans quel compte les titres participatifs sont-ils inscrits en fonds non remboursables ?",
+    "reponse_attendue": "Dans le compte 16711 – Titres participatifs montant principal.",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 4,
+    "type": "factuelle"
+  },
+  {
+    "id": 5,
+    "question": "Qu'est-ce qu'une avance conditionnée selon le règlement 2024-07 ?",
+    "reponse_attendue": "Une avance accordée par l'État, un organisme public ou une société ou un établissement qu'ils contrôlent, dont le remboursement est conditionné par le succès du projet financé. En l'absence de succès, elle est abandonnée en tout ou partie par le prêteur.",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 6,
+    "type": "factuelle"
+  },
+  {
+    "id": 6,
+    "question": "Quels comptes enregistrent le principal et les intérêts courus d'une avance conditionnée ?",
+    "reponse_attendue": "Le compte 1673 pour le principal et le compte 1674 pour les intérêts courus (sous conditions).",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 6,
+    "type": "factuelle"
+  },
+  {
+    "id": 7,
+    "question": "Un passif doit-il être comptabilisé quand un service est rémunéré au moyen d'un instrument de capitaux propres à émettre ?",
+    "reponse_attendue": "Non. Aucun passif n'est comptabilisé et aucune charge n'est constatée. La rémunération est comptabilisée en contrepartie du débit d'un compte de réserves lors de la remise de l'instrument (article 322-14).",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 6,
+    "type": "factuelle"
+  },
+  {
+    "id": 8,
+    "question": "Dans l'exemple où l'émetteur peut différer le remboursement, que se passe-t-il si le prêteur n'a pas été notifié dans les délais ?",
+    "reponse_attendue": "Un mois avant l'échéance, l'instrument est reclassé en dettes, car les termes imposent alors un remboursement en trésorerie.",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 5,
+    "type": "factuelle"
+  },
+  {
+    "id": 9,
+    "question": "À quelle date le règlement ANC 2024-07 a-t-il été homologué et publié au Journal officiel ?",
+    "reponse_attendue": "Il a été homologué par arrêté du 26 décembre 2025 et publié au Journal officiel du 27 décembre 2025 (adopté par le Collège de l'ANC le 6 décembre 2024).",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 1,
+    "type": "factuelle"
+  },
+  {
+    "id": 10,
+    "question": "Comment la valeur résiduelle d'un actif est-elle définie, et quand est-elle prise en compte pour le montant amortissable ?",
+    "reponse_attendue": "C'est le montant, net des coûts de sortie attendus, qu'une entité obtiendrait de la cession de l'actif à la fin de son utilisation. Elle n'est prise en compte que lorsqu'elle est à la fois significative et mesurable (article 214-4).",
+    "source_attendue": "Recueil-NF-Janvier-2025.pdf",
+    "page": 59,
+    "type": "factuelle"
+  },
+  {
+    "id": 11,
+    "question": "Sur quelle durée maximale les frais d'établissement sont-ils amortis ?",
+    "reponse_attendue": "Selon un plan et dans un délai maximal de cinq ans (article R. 123-187 du code de commerce).",
+    "source_attendue": "Recueil-NF-Janvier-2025.pdf",
+    "page": 23,
+    "type": "factuelle"
+  },
+  {
+    "id": 12,
+    "question": "Sur quelle durée le fonds commercial est-il amorti quand sa durée d'utilisation ne peut pas être déterminée de manière fiable ?",
+    "reponse_attendue": "Sur 10 ans. Les petites entreprises peuvent aussi amortir tous leurs fonds commerciaux sur 10 ans dans leurs comptes individuels.",
+    "source_attendue": "Recueil-NF-Janvier-2025.pdf",
+    "page": 58,
+    "type": "factuelle"
+  },
+  {
+    "id": 13,
+    "question": "À quelle valeur un actif acquis à titre gratuit est-il comptabilisé à son entrée dans le patrimoine ?",
+    "reponse_attendue": "À sa valeur vénale (article 213-1).",
+    "source_attendue": "Recueil-NF-Janvier-2025.pdf",
+    "page": 43,
+    "type": "factuelle",
+    "remarque": "La même phrase est citée en exemple page 341 (évaluation de droits d'exploitation audiovisuelle). Cette page est aussi acceptable."
+  },
+  {
+    "id": 14,
+    "question": "Un élément d'actif non significatif doit-il obligatoirement être inscrit au bilan ?",
+    "reponse_attendue": "Non. Il peut ne pas être inscrit au bilan, et il est alors comptabilisé en charges de l'exercice (article 212-6).",
+    "source_attendue": "Recueil-NF-Janvier-2025.pdf",
+    "page": 42,
+    "type": "factuelle"
+  },
+  {
+    "id": 15,
+    "question": "Dans quel compte les avances conditionnées de l'État sont-elles enregistrées ?",
+    "reponse_attendue": "Selon le règlement 2024-07 (le plus récent), le principal va au compte 1673 et les intérêts courus au compte 1674. Le recueil de janvier 2025, antérieur au règlement, indique seulement le compte 1674 pour les avances conditionnées de l'État.",
+    "source_attendue": "REGLT_2024_07_version-commentee-def.pdf",
+    "page": 6,
+    "type": "factuelle",
+    "remarque": "Conflit de versions voulu. Le recueil de janvier 2025 (page 530) donne le compte 1674. La réponse attendue est celle du règlement 2024-07, plus récent."
+  },
+  {
+    "id": 16,
+    "question": "Quel est le montant du SMIC horaire brut en 2026 ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus"
+  },
+  {
+    "id": 17,
+    "question": "Quelle est la capitale de l'Australie ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus"
+  },
+  {
+    "id": 18,
+    "question": "Quel est le prix d'un billet de train entre Amiens et Paris ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus"
+  }
+]
