@@ -156,12 +156,16 @@ def answer_without_documents(question):
     Entrée :
         question (str) : question posée au modèle.
     Sortie :
-        str : la réponse du modèle, donnée de mémoire.
+        str : la réponse du modèle, donnée de mémoire (coupée à NUM_PREDICT tokens).
     """
     response = ollama.chat(
         model=config.LLM_MODEL,
         messages=[{"role": "user", "content": question}],
-        options={"num_ctx": config.NUM_CTX, "temperature": config.TEMPERATURE},
+        options={
+            "num_ctx": config.NUM_CTX,
+            "temperature": config.TEMPERATURE,
+            "num_predict": config.NUM_PREDICT,
+        },
     )
     return response.message.content
 

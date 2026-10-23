@@ -27,6 +27,12 @@ EMBED_MODEL = "bge-m3"
 # 4096 laisse de la marge. À relever si TOP_K ou CHUNK_SIZE augmentent.
 NUM_CTX = 4096
 
+# Nombre maximal de tokens d'une réponse du modèle.
+# Évite qu'un modèle qui répète la même phrase ne bloque le programme.
+# Une réponse normale fait 150 à 250 tokens : 500 laisse de la marge.
+# Une réponse plus longue est coupée.
+NUM_PREDICT = 500
+
 # 0 : le modèle répond de façon stable, sans broder, et l'évaluation est reproductible
 TEMPERATURE = 0
 

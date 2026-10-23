@@ -69,12 +69,16 @@ def answer_question(question, chunks):
         question (str) : question posée par l'utilisateur.
         chunks (list[dict]) : morceaux retrouvés par search_chunks.
     Sortie :
-        str : le texte de la réponse du modèle.
+        str : le texte de la réponse du modèle (coupée à NUM_PREDICT tokens).
     """
     response = ollama.chat(
         model=config.LLM_MODEL,
         messages=build_messages(question, chunks),
-        options={"num_ctx": config.NUM_CTX, "temperature": config.TEMPERATURE},
+        options={
+            "num_ctx": config.NUM_CTX,
+            "temperature": config.TEMPERATURE,
+            "num_predict": config.NUM_PREDICT,
+        },
     )
     return response.message.content
 
