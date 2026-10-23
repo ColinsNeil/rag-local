@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "question": "Je n'ai pas fait de prépa mais j'ai un bac+3. Puis-je entrer directement en deuxième année d'ingénieur ?",
+    "reponse_attendue": "Oui. La 2e année du cycle ingénieur est ouverte aux titulaires d'un bac +3, sur dossier et entretien.",
+    "source_attendue": "PLAQUETTE-TIPS.pdf",
+    "page": 3,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 2,
+    "question": "Combien de temps faut-il passer à l'étranger pendant la formation ?",
+    "reponse_attendue": "Une période de stage à l'étranger d'au moins 9 semaines sur la durée du cycle ingénieur.",
+    "source_attendue": "PLAQUETTE-TIPS.pdf",
+    "page": 2,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 3,
+    "question": "À partir de quand étudie-t-on en alternance dans cette école ?",
+    "reponse_attendue": "À partir de la 2e année, avec un contrat d'apprentissage de 2 ans (statut salarié).",
+    "source_attendue": "PLAQUETTE-TIPS.pdf",
+    "page": 2,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 4,
+    "question": "À quels métiers prépare cette formation ?",
+    "reponse_attendue": "Responsable de la sécurité des systèmes d'information de santé (RSSI), data scientist, ingénieur en R&D e-santé, ingénieur en intelligence artificielle, architecte systèmes et réseaux de santé, chef de projets dans les industries de la santé.",
+    "source_attendue": "PLAQUETTE-TIPS.pdf",
+    "page": 3,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 5,
+    "question": "Où se trouve le campus ?",
+    "reponse_attendue": "Campus Saint-Leu, 45 rue Saint-Leu, 80000 Amiens.",
+    "source_attendue": "PLAQUETTE-TIPS.pdf",
+    "page": 4,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 6,
+    "question": "Avec quel logiciel fait-on les statistiques au semestre 6 ?",
+    "reponse_attendue": "Avec le logiciel R (module Ingénierie mathématique 2).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 17,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante. Les modules Ingénierie mathématique 2 et Introduction à la cybersécurité sont côte à côte sur la page 17 (deux colonnes)."
+  },
+  {
+    "id": 7,
+    "question": "Dans quel langage de programmation apprend-on à coder au début du cursus ?",
+    "reponse_attendue": "En langage C (module Harmonisation des connaissances, semestre 5).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 10,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 8,
+    "question": "Combien d'heures dure l'initiation à l'IA ?",
+    "reponse_attendue": "35 heures au total : 11 de cours magistraux, 14 de TD et 10 de TP (module Introduction à l'IA, semestre 6).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 18,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 9,
+    "question": "Quelles techniques apprend-on pour rendre des données de santé anonymes ?",
+    "reponse_attendue": "Le k-anonymat, la l-diversité, la t-proximité, la confidentialité différentielle et la publication de données préservant la vie privée (module Protection et anonymisation des données, semestre 8).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 33,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 10,
+    "question": "Dans quel cours parle-t-on de la responsabilité juridique quand une IA médicale se trompe ?",
+    "reponse_attendue": "Dans le cours Droit de la santé (semestre 7), partie sur la responsabilité liée aux usages du numérique en santé, avec la responsabilité du fait des produits défectueux et le projet de règlement européen sur la responsabilité en matière d'intelligence artificielle.",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 30,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 11,
+    "question": "Combien d'heures de cours y a-t-il sur la télémédecine ?",
+    "reponse_attendue": "26 heures au total : 10 de cours magistraux et 16 de TD (semestre 9).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 37,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante. Deux modules sont côte à côte sur la page 37 (Télémédecine et Big Data)."
+  },
+  {
+    "id": 12,
+    "question": "Quelles sortes de bases de données étudie-t-on au semestre 5 ?",
+    "reponse_attendue": "Les bases de données hiérarchiques, réseau et relationnelles, avec une ouverture sur le noSQL (module Bases de données).",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 10,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 13,
+    "question": "Dans quel cours apprend-on les bonnes pratiques d'hygiène informatique ?",
+    "reponse_attendue": "Dans le module Introduction à la cybersécurité (semestre 6), dont le programme comprend l'hygiène informatique et les bonnes pratiques.",
+    "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
+    "page": 17,
+    "type": "factuelle",
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
+  },
+  {
+    "id": 14,
+    "question": "Combien coûtent les frais de scolarité à l'école ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus",
+    "remarque": "Information absente des deux documents (vérifiée par recherche de mots clés)."
+  },
+  {
+    "id": 15,
+    "question": "Quel est le taux d'insertion professionnelle des diplômés ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus",
+    "remarque": "Information absente des deux documents (vérifiée par recherche de mots clés)."
+  },
+  {
+    "id": 16,
+    "question": "Quelle est la date limite pour candidater ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus",
+    "remarque": "Information absente des deux documents (vérifiée par recherche de mots clés)."
+  },
+  {
+    "id": 17,
+    "question": "Où trouver un logement étudiant à Amiens ?",
+    "reponse_attendue": "Je ne sais pas d'après les documents fournis.",
+    "source_attendue": null,
+    "page": null,
+    "type": "hors_corpus",
+    "remarque": "Information absente des deux documents (vérifiée par recherche de mots clés)."
+  }
+]
