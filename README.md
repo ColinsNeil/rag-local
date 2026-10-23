@@ -35,8 +35,8 @@ Les dépendances sont `ollama`, `chromadb` et `pypdf`.
 
 Les PDF ne sont pas dans le dépôt. Pour reproduire la démonstration, créez un dossier `docs/` à la racine du dépôt, puis téléchargez les deux documents suivants et placez-les dedans :
 
-- `PLAQUETTE-TIPS.pdf` : plaquette de la spécialité TIPS. [lien à compléter par l'auteur]
-- `Syllabus-Numerique-Sante-IA.pdf` : syllabus du cursus. [lien à compléter par l'auteur]
+- `PLAQUETTE-TIPS.pdf` : plaquette de la spécialité TIPS. [lien de téléchargement](https://eijv.u-picardie.fr/wp-content/uploads/sites/14/2025/12/PLAQUETTE-TIPS.pdf)
+- `Syllabus-Numerique-Sante-IA.pdf` : syllabus du cursus. [lien de téléchargement](https://eijv.u-picardie.fr/wp-content/uploads/sites/14/2025/11/Syllabus-Numerique-Sante-IA.pdf)
 
 ## Utilisation
 
@@ -138,7 +138,8 @@ Les 13 questions factuelles sont notées.
 - **Refus à tort.** Le modèle de 3 milliards de paramètres refuse parfois de répondre alors que le bon passage lui est fourni (questions 1, 8 et 10).
 - **Réponses construites à partir de titres (test manuel, non mesuré).** Hors évaluation, à une question vague sur le détail des matières du semestre 7 posée avec `query.py`, le modèle a construit des descriptions à partir des seuls titres (« pourrait couvrir… »), parce que la recherche n'avait retrouvé que des pages de listes de matières.
 - **Titre du module séparé de sa liste.** À la question 13, le morceau retrouvé (page 17) contient la liste « V) Hygiène informatique et bonnes pratiques » mais pas le titre du module Introduction à la cybersécurité, qui se trouve dans le morceau précédent. Le modèle a répondu avec un mauvais intitulé. La liste « Passages consultés » montre ce qui a été retrouvé et non la preuve que la réponse s'y trouve.
-- **Pages sans texte.** Les pages 3 à 6 du syllabus sont des images de tableaux de structure. Elles sont ignorées car le programme ne fait pas d'OCR.
+- **Pages sans texte.** Les pages 3 à 6 du syllabus sont des images de tableaux de structure. Elles sont ignorées car le programme ne fait pas d'OCR (voir l'essai de lecture d'images ci-dessous).
+- **Lecture des pages en images (test manuel, non intégré).** Un essai avec le modèle de vision `qwen2.5vl:3b` sur une des pages en images du syllabus (tableau de structure du semestre S5) a décalé plusieurs colonnes, laissé vide la colonne des noms de matières et s'est arrêté après quatre lignes en produisant des lignes vides. La lecture des pages en images n'a donc pas été ajoutée au programme.
 - **Citations irrégulières.** Sur les 10 réponses factuelles non refusées 4 donnent le fichier et la page (questions 5, 7, 9 et 13) et 2 donnent le fichier avec un numéro d'extrait à la place de la page (questions 2 et 11). Les 4 autres ne donnent ni l'un ni l'autre (questions 3, 4, 6 et 12). Le nom du fichier est parfois déformé (« Plaquette-Tips.pdf »).
 - **Hors corpus.** La recherche renvoie toujours 4 morceaux et les distances ne séparent pas les deux cas : 0,48 à 0,55 hors corpus contre 0,32 à 0,52 dans le corpus (distance du morceau le plus proche). Le refus repose uniquement sur le modèle et n'a été testé que sur 4 questions simples.
 - **Réponses coupées.** La réponse à la question 9 sans documents est coupée à 500 tokens au milieu d'une liste qui se répète. Une réponse tronquée n'est pas signalée.
@@ -155,4 +156,4 @@ Les 13 questions factuelles sont notées.
 
 ## Summary in English
 
-A local, command-line RAG pipeline in Python. It is domain-agnostic: the domain comes only from the documents in the `docs/` folder. It indexes PDF and text files with Ollama (bge-m3 embeddings) and ChromaDB and answers questions with qwen2.5:3b while citing file and page. It says it does not know when the documents do not contain the answer. The demonstration corpus is made of two school documents (a programme brochure and a syllabus). Retrieval and generation are evaluated separately on a hand-written question set. The figures will be added after the evaluation on this corpus. The code was written with Claude Code from the CLAUDE.md specification.
+A local, command-line RAG pipeline in Python. It is domain-agnostic: the domain comes only from the documents in the `docs/` folder. It indexes PDF and text files with Ollama (bge-m3 embeddings) and ChromaDB and answers questions with qwen2.5:3b while citing file and page. It says it does not know when the documents do not contain the answer. The demonstration corpus is made of two school documents (a programme brochure and a syllabus). Retrieval and generation are evaluated separately on a question set written and graded with Claude, so the figures are indicative and not independent. Results and limits are reported above. The code was written with Claude Code from the CLAUDE.md specification.
