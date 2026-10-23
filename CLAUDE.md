@@ -3,7 +3,7 @@
 ## Objectif
 Programme en ligne de commande qui répond à des questions à partir des documents d'un dossier local. Les réponses se basent uniquement sur ces documents et citent leurs sources (fichier et page). Si l'information n'y figure pas, le programme le dit et ne répond pas de mémoire.
 
-L'assistant est généraliste. Aucun domaine n'est codé en dur. Le domaine vient seulement du contenu du dossier `docs/`. Le corpus de démonstration est composé de normes comptables françaises publiées par l'Autorité des normes comptables (ANC).
+L'assistant est généraliste. Aucun domaine n'est codé en dur. Le domaine vient seulement du contenu du dossier `docs/`. Le corpus de démonstration est composé de deux documents de l'EIJV sur la spécialité TIPS : sa plaquette et le syllabus du cursus.
 
 ## Règles de travail pour Claude Code
 - Travailler une étape à la fois, en mode plan. Présenter le plan, attendre la validation, puis écrire.
