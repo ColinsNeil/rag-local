@@ -103,11 +103,46 @@ Remplacez le contenu de `docs/` par vos propres documents et le fichier `eval/qu
 
 ## Résultats
 
-À compléter après l'évaluation sur le nouveau corpus.
+Corpus : deux fichiers, `PLAQUETTE-TIPS.pdf` (4 pages) et `Syllabus-Numerique-Sante-IA.pdf` (44 pages dont 4 sans texte), soit 94 morceaux.
+
+L'évaluation porte sur 17 questions (`eval/questions.json`) : 13 factuelles en langage courant et 4 hors corpus.
+
+### Recherche : la bonne page figure-t-elle parmi les 4 morceaux retrouvés ?
+
+La bonne page figure parmi les 4 morceaux retrouvés pour 13 questions sur 13.
+
+| Rang du bon morceau | Questions |
+|---|---|
+| 1 | 9 (questions 1, 2, 3, 4, 5, 8, 9, 10 et 11) |
+| 2 | 3 (questions 6, 7 et 12) |
+| 3 | 1 (question 13) |
+
+### Génération : réponses notées
+
+Les 13 questions factuelles sont notées.
+
+| | Juste | Partiel | Faux |
+|---|---|---|---|
+| Avec documents | 7 | 2 | 4 |
+| Sans documents | 0 | 2 | 11 |
+
+- Hors corpus : 4 refus corrects sur 4 avec documents.
+- Refus à tort sur des questions factuelles : 3 sur 13 (questions 1, 8 et 10). Dans les trois cas la bonne page était retrouvée en rang 1.
+- Critères de notation : juste si l'information demandée est correcte. Partiel si le fond est juste mais incomplet ou si un détail est faux. Faux si la réponse est incorrecte ou contradictoire ou s'il y a un refus à tort.
+- Notation : établie par Claude à partir des réponses attendues. Elle n'est donc pas indépendante. Les questions ont aussi été écrites par Claude après lecture des PDF.
 
 ## Limites
 
-À compléter après l'évaluation sur le nouveau corpus.
+- **Jeu de questions réduit et petit corpus.** 13 questions factuelles et 4 hors corpus pour 94 morceaux : les résultats sont indicatifs et la recherche est plus facile que sur un grand corpus.
+- **Questions écrites et notées par Claude.** Elles ne sont pas indépendantes.
+- **Refus à tort.** Le modèle de 3 milliards de paramètres refuse parfois de répondre alors que le bon passage lui est fourni (questions 1, 8 et 10).
+- **Réponses construites à partir de titres (test manuel, non mesuré).** Hors évaluation, à une question vague sur le détail des matières du semestre 7 posée avec `query.py`, le modèle a construit des descriptions à partir des seuls titres (« pourrait couvrir… »), parce que la recherche n'avait retrouvé que des pages de listes de matières.
+- **Titre du module séparé de sa liste.** À la question 13, le morceau retrouvé (page 17) contient la liste « V) Hygiène informatique et bonnes pratiques » mais pas le titre du module Introduction à la cybersécurité, qui se trouve dans le morceau précédent. Le modèle a répondu avec un mauvais intitulé. La liste « Passages consultés » montre ce qui a été retrouvé et non la preuve que la réponse s'y trouve.
+- **Pages sans texte.** Les pages 3 à 6 du syllabus sont des images de tableaux de structure. Elles sont ignorées car le programme ne fait pas d'OCR.
+- **Citations irrégulières.** Sur les 10 réponses factuelles non refusées 4 donnent le fichier et la page (questions 5, 7, 9 et 13) et 2 donnent le fichier avec un numéro d'extrait à la place de la page (questions 2 et 11). Les 4 autres ne donnent ni l'un ni l'autre (questions 3, 4, 6 et 12). Le nom du fichier est parfois déformé (« Plaquette-Tips.pdf »).
+- **Hors corpus.** La recherche renvoie toujours 4 morceaux et les distances ne séparent pas les deux cas : 0,48 à 0,55 hors corpus contre 0,32 à 0,52 dans le corpus (distance du morceau le plus proche). Le refus repose uniquement sur le modèle et n'a été testé que sur 4 questions simples.
+- **Réponses coupées.** La réponse à la question 9 sans documents est coupée à 500 tokens au milieu d'une liste qui se répète. Une réponse tronquée n'est pas signalée.
+- **Sans documents.** Le modèle donne des réponses génériques et parfois inventées (question 15 : un taux d'insertion de « 80 % selon l'Insee »).
 
 ## Pistes d'amélioration (non testées)
 
