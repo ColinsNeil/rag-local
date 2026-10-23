@@ -33,7 +33,7 @@ Les dépendances sont `ollama`, `chromadb` et `pypdf`.
 
 ## Documents du corpus
 
-Les PDF ne sont pas dans le dépôt. Pour reproduire la démonstration, téléchargez les deux documents suivants et placez-les dans le dossier `docs/` :
+Les PDF ne sont pas dans le dépôt. Pour reproduire la démonstration, créez un dossier `docs/` à la racine du dépôt, puis téléchargez les deux documents suivants et placez-les dedans :
 
 - [Règlement ANC n° 2024-07, version commentée](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/2024/R2024-07/REGLT_2024_07_version-commentee-def.pdf) (`REGLT_2024_07_version-commentee-def.pdf`)
 - [Recueil des normes comptables françaises, janvier 2025](https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_Janvier2025/Recueil-NF-Janvier-2025.pdf) (`Recueil-NF-Janvier-2025.pdf`)

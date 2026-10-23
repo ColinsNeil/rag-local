@@ -35,7 +35,7 @@ Exclus
 
 ## Pile technique
 - Python 3.10 ou plus récent
-- Ollama pour les modèles, tous deux en local sur processeur
+- Ollama pour les modèles, tous deux en local (Ollama utilise le GPU s'il est compatible)
 - modèle de réponse `qwen2.5:3b`
 - modèle d'embeddings `bge-m3`
 - ChromaDB pour la base vectorielle
