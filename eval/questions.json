@@ -51,7 +51,7 @@
     "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
     "page": 17,
     "type": "factuelle",
-    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante. Les modules Ingénierie mathématique 2 et Introduction à la cybersécurité sont côte à côte sur la page 17 (deux colonnes)."
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
   },
   {
     "id": 7,
@@ -96,7 +96,7 @@
     "source_attendue": "Syllabus-Numerique-Sante-IA.pdf",
     "page": 37,
     "type": "factuelle",
-    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante. Deux modules sont côte à côte sur la page 37 (Télémédecine et Big Data)."
+    "remarque": "Question en langage courant, écrite par Claude après lecture du PDF : non indépendante."
   },
   {
     "id": 12,
